@@ -5,4 +5,5 @@
 #### 这里是众多的例子哦，React VR带您走进3D科幻的世界
 #### 1、flyingbird
 
- ![image](https://github.com/LiuC520/ReactVR/examples/1.react-vr-flyingbird/flyingbird.jpeg)
+ ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/1.react-vr-flyingbird/flyingbird.jpeg)
+ 
