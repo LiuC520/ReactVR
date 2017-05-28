@@ -9,6 +9,7 @@ import {
   Text,
   View,
   Image,
+  Sound
 } from 'react-vr';
 
 import CylindricalPanel from 'CylindricalPanel';
@@ -29,6 +30,8 @@ class react_vr_flyingbird extends React.Component {
         <Pano source={asset('chess-world.jpg')} />
             <Text style={Styles.citytext}>React VR中文网：www.vr-react.com </Text>
             <Text style={Styles.citytext}>刘成 </Text>
+            <Sound source={asset('yese.mp3')} loop={true} volume={1}/>
+
       </View>
     );
   }

@@ -25,26 +25,27 @@ class TianQi extends React.Component {
     super(props);
 
     this.spaceSkymap = [
-      '../static_assets/space/space_right.png',
-      '../static_assets/space/space_left.png',
-      '../static_assets/space/space_up.png',
-      '../static_assets/space/space_down.png',
-      '../static_assets/space/space_back.png',
-      '../static_assets/space/space_front.png',
+      './static_assets/space/space_right.png',
+      './static_assets/space/space_left.png',
+      './static_assets/space/space_up.png',
+      './static_assets/space/space_down.png',
+      './static_assets/space/space_back.png',
+      './static_assets/space/space_front.png',
     ];
 
     this.state = {
       currentIndex : 0,
       weather:null,
-      playerState: new MediaPlayerState({autoPlay: true, muted: false}), // init with muted, autoPlay
+      playerState: new MediaPlayerState({autoPlay: true, muted: true}), // init with muted, autoPlay
     };
   }
 
   componentDidMount() {
     GetData.getData('',true).then(d=>{
-      
+      console.log(d)
+      console.log(d.content.address_detail.city)
       for(let i = 0;i<CityData.length;i++){
-        if(CityData[i]['d4'] === d.city){
+        if(CityData[i]['d4'] === d.content.address_detail.city){
           GetData.getData(CityData[i]['d1'])
             .then(d=>{
               this.setState({

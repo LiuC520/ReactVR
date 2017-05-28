@@ -17,7 +17,7 @@
  #### 2、[ReactVrEgg 星空陨石砸到头上了 具体的示例可以查看](http://www.vr-react.com/example/ReactVrEgg/)
 #### 3、[天气预报+看片儿哦](http://www.vr-react.com/example/tianqi//)
  ![image](https://github.com/LiuC520/ReactVR/blob/master/tianqi.png)
- 
+ 但是这个项目需要用到跨域，直接在浏览器中天气是打不开的
  ### 其他示例
 #### 1、[ControllerDemo 具体的示例可以查看](http://www.vr-react.com/example/ControllerDemo/)
 #### 2、[CylindricalPanel 具体的示例可以查看](http://www.vr-react.com/example/CylindricalPanel/)

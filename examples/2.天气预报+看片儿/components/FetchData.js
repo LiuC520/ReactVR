@@ -1,10 +1,12 @@
 const api = "http://zhwnlapi.etouch.cn/Ecalender/api/v2/weather?date=20170526&citykey="
-const ipapi = "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json"
+// const ipapi = "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json"
+const ipapi = "https://api.map.baidu.com/location/ip?ak=xNmE9vBpE10dFSu9Mbyxv9A8ZHChaElZ&coor=bd09ll"
 const appkey = "99817661"
 let fetchOption = {
     method: 'GET',
     headers: {
-        'Accept': 'application/json',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        // 'Access-Control-Allow-Origin':'*'
     },
 };
 
