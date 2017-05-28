@@ -3,12 +3,20 @@
 
 
 #### 这里是众多的例子哦，React VR带您走进3D科幻的世界
+### 运行项目步骤
+#### 一、下载我的例子，git clone https://github.com/LiuC520/ReactVR
+#### 二、打开终端，进入examples目录下面的具体的项目里,cd examples && cd 1.react-vr-flyingbird
+#### 三、npm i
+#### 四、安装完成后，输入：npm start
+#### 五、在浏览器打开 http://localhost:8081/vr/
+#### 六、等待加载完成，就可以鼠标点击画面移动了
+
 #### 1、[flyingbird 具体的示例可以查看](http://www.vr-react.com/example/react-vr-flyingbird/)
 
  ![image](https://github.com/LiuC520/ReactVR/blob/master/flyingbird.gif)
  #### 2、[ReactVrEgg 星空陨石砸到头上了 具体的示例可以查看](http://www.vr-react.com/example/ReactVrEgg/)
-
- ![image](https://github.com/LiuC520/ReactVR/blob/master/ReactVrEgg.gif)
+#### 3、[天气预报+看片儿哦](http://www.vr-react.com/example/tianqi//)
+ ![image](https://github.com/LiuC520/ReactVR/blob/master/tianqi.png)
  
  ### 其他示例
 #### 1、[ControllerDemo 具体的示例可以查看](http://www.vr-react.com/example/ControllerDemo/)
