@@ -25,12 +25,12 @@ class TianQi extends React.Component {
     super(props);
 
     this.spaceSkymap = [
-      './static_assets/space/space_right.png',
-      './static_assets/space/space_left.png',
-      './static_assets/space/space_up.png',
-      './static_assets/space/space_down.png',
-      './static_assets/space/space_back.png',
-      './static_assets/space/space_front.png',
+      '../static_assets/space/space_right.png',
+      '../static_assets/space/space_left.png',
+      '../static_assets/space/space_up.png',
+      '../static_assets/space/space_down.png',
+      '../static_assets/space/space_back.png',
+      '../static_assets/space/space_front.png',
     ];
 
     this.state = {
@@ -74,7 +74,7 @@ class TianQi extends React.Component {
         <AmbientLight intensity={0.85} />
         <Pano source={{uri:this.spaceSkymap}} />
         
-        <CylindricalPanel 
+        {/*<CylindricalPanel 
             layer={{width: 2000, height: 800}} 
             style={{position: 'absolute'}}
             radius={80}
@@ -110,13 +110,13 @@ class TianQi extends React.Component {
             </Image>:null
             }
            
-        </CylindricalPanel>
+        </CylindricalPanel>*/}
             {/*<Sound source={asset('mp4/shehuiyao.mp3')} loop={true}/>*/}
        <View
               style={{
                 alignItems: 'center',
                 layoutOrigin: [0.5, 0.5, 0],
-                transform: [{translate: [0, 0, 10]},{rotateY:-180}],
+                transform: [{translate: [0, 0, 10]},{rotateY:0}],
               }}>
               <Video
                 style={{height: 10, width: 16}}

@@ -8,9 +8,9 @@ import Boid from '../components/bird/boid.js'
 import Bird from '../components/bird/bird.js'
 
 var fallbackFonts = {
-'./static_assets/fonts/cjk_0.fnt':'./static_assets/fonts/cjk_0_sdf.png',
-'./static_assets/fonts/cjk_1.fnt':'./static_assets/fonts/cjk_1_sdf.png',
-'./static_assets/fonts/cjk_2.fnt':'./static_assets/fonts/cjk_2_sdf.png',
+'../static_assets/fonts/cjk_0.fnt':'../static_assets/fonts/cjk_0_sdf.png',
+'../static_assets/fonts/cjk_1.fnt':'../static_assets/fonts/cjk_1_sdf.png',
+'../static_assets/fonts/cjk_2.fnt':'../static_assets/fonts/cjk_2_sdf.png',
 };
 
 var font = OVRUI.loadFont();

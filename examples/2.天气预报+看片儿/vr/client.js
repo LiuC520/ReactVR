@@ -7,9 +7,9 @@ import {VRInstance, addCustomizedVideoPlayer} from 'react-vr-web';
 import * as OVRUI from 'ovrui';
 
 var fallbackFonts = {
-'./static_assets/fonts/cjk_0.fnt':'./static_assets/fonts/cjk_0_sdf.png',
-'./static_assets/fonts/cjk_1.fnt':'./static_assets/fonts/cjk_1_sdf.png',
-'./static_assets/fonts/cjk_2.fnt':'./static_assets/fonts/cjk_2_sdf.png',
+'../static_assets/fonts/cjk_0.fnt':'../static_assets/fonts/cjk_0_sdf.png',
+'../static_assets/fonts/cjk_1.fnt':'../static_assets/fonts/cjk_1_sdf.png',
+'../static_assets/fonts/cjk_2.fnt':'../static_assets/fonts/cjk_2_sdf.png',
 };
 var font = OVRUI.loadFont();
 var count = 0 ;

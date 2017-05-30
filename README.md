@@ -11,7 +11,7 @@
 #### 五、在浏览器打开 http://localhost:8081/vr/
 #### 六、等待加载完成，就可以鼠标点击画面移动了
 
-#### 1、[flyingbird 具体的示例可以查看](http://www.vr-react.com/example/react-vr-flyingbird/)
+#### 1、[flyingbird ,在辽阔的打的上听着音乐看着飞翔的一群群小鸟，具体的示例可以查看](http://www.vr-react.com/example/react-vr-flyingbird/)
 
  ![image](https://github.com/LiuC520/ReactVR/blob/master/flyingbird.gif)
  #### 2、[ReactVrEgg 星空陨石砸到头上了 具体的示例可以查看](http://www.vr-react.com/example/ReactVrEgg/)
