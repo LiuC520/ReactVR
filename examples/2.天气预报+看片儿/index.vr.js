@@ -12,8 +12,10 @@ import {
   Video, 
   VideoControl, 
   MediaPlayerState,
-  Sound
+  Sound,
+  AsyncStorage
 } from 'react-vr';
+
 
 import CityData from './components/json/city2.json';
 import GetData from './components/FetchData';
@@ -25,12 +27,12 @@ class TianQi extends React.Component {
     super(props);
 
     this.spaceSkymap = [
-      '../static_assets/space/space_right.png',
-      '../static_assets/space/space_left.png',
-      '../static_assets/space/space_up.png',
-      '../static_assets/space/space_down.png',
-      '../static_assets/space/space_back.png',
-      '../static_assets/space/space_front.png',
+      './static_assets/space/space_right.png',
+      './static_assets/space/space_left.png',
+      './static_assets/space/space_up.png',
+      './static_assets/space/space_down.png',
+      './static_assets/space/space_back.png',
+      './static_assets/space/space_front.png',
     ];
 
     this.state = {
@@ -41,13 +43,13 @@ class TianQi extends React.Component {
   }
 
   componentDidMount() {
-    GetData.getData('',true).then(d=>{
-      console.log(d)
-      console.log(d.content.address_detail.city)
-      for(let i = 0;i<CityData.length;i++){
-        if(CityData[i]['d4'] === d.content.address_detail.city){
+AsyncStorage.multiGet(['city'],(e,d)=>{
+      console.log(d[0][1])
+       for(let i = 0;i<CityData.length;i++){
+        if(CityData[i]['d4'] === d[0][1]){
           GetData.getData(CityData[i]['d1'])
             .then(d=>{
+              console.log(d)
               this.setState({
                 currentIndex:i,
                 weather:d,
@@ -58,8 +60,9 @@ class TianQi extends React.Component {
             })
         }
       }
-    })
-    .catch(e=>console.log(e))
+})
+     
+    
   }
 
   render() {
@@ -74,7 +77,7 @@ class TianQi extends React.Component {
         <AmbientLight intensity={0.85} />
         <Pano source={{uri:this.spaceSkymap}} />
         
-        {/*<CylindricalPanel 
+        <CylindricalPanel 
             layer={{width: 2000, height: 800}} 
             style={{position: 'absolute'}}
             radius={80}
@@ -110,7 +113,7 @@ class TianQi extends React.Component {
             </Image>:null
             }
            
-        </CylindricalPanel>*/}
+        </CylindricalPanel>
             {/*<Sound source={asset('mp4/shehuiyao.mp3')} loop={true}/>*/}
        <View
               style={{
