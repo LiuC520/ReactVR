@@ -29,7 +29,7 @@ function init(bundle, parent, options) {
   scene.fog = new THREE.Fog( 0xcce0ff, 500, 10000 );
 
   camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
-  camera.position.set( -0, 50,1500 );
+  camera.position.set( 0, 50,1500 );
 
   addCloth();
         

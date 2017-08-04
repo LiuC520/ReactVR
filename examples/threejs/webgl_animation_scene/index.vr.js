@@ -28,50 +28,19 @@ import {
   AppRegistry,
   Pano,
   View,
-  NativeModules,
-  VrButton,
-  Text
+    AmbientLight,
+
 } from 'react-vr';
 
-const changModule = NativeModules.ChangModule;
 
 class VideoSample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      wind:false,
-      pins:true
-    };
-  }
-}
-//是否有风
-wind=()=>{
-  this.setState({wind:!this.state.wind},function(e){
-    changModule.changeWind(this.state.wind)
-  })
-}
-
-//是否显示球
-pins=()=>{
-  this.setState({pins:!this.state.pins},function(e){
-    changModule.changPins()
-  })
-}
 
   render() {
     return (
       <View>
-        <VrButton 
-          style={{backgroundColor:'white',alignItems:'center',justifyContent:'center',width:100,height:50,transform:[{translate:[0,250,0]}]}}
-          onClick={ this.wind }>
-          <Text style={{color:'black',fontSize:30}}>wind</Text>
-        </VrButton>
+        <AmbientLight style={{color:'#404040',transform: [{translate:  [-10, 3.43, 11.31]}],}}/>
 
-        <VrButton 
-          style={{backgroundColor:'white',alignItems:'center',justifyContent:'center',width:100,height:50,transform:[{translate:[0,550,0]}]}}
-          onClick={ this.pins }>
-          <Text style={{color:'black',fontSize:30}}>pins</Text>
-        </VrButton>
+         {/* <Pano source={asset('chess-world.jpg')}/>  */}
       </View>
     );
   }
