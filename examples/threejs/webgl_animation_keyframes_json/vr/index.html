@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>wode</title>
+    <style>body { margin: 0; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <head>
+  <body>
+    <!-- <video id="tenvideo_video_player_0"autoplay="autoplay"  controls="controls" width="100%" height="100%" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" preload="auto" poster="//i.gtimg.cn/qqlive/images/20150608/black.png" tvp_loadingad_ended="1" src="http://101.227.216.144/vmind.qqvideo.tc.qq.com/APxHjFgNERwJw5NHRCh2Ccphbm5Hkw56R207yW7hEpDI/z02008a8sy8.p202.1.mp4?vkey=B3CDB8C2EEBD372AF32565E8CD11FC1ACE87C715F2B4608BFF9E9639BE0F08CA5F316BD6C13E511D4DDD3932C0911D0315ED1E128D3B529A30F9E840FE078EFA680284A8291293505257B81AB811E587C6AE349CE4B93D44&amp;platform=&amp;sdtfrom=&amp;fmt=hd&amp;level=0"></video> -->
+    <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
+      <script src="./client.bundle?platform=vr"></script>
+    <script>
+      // Initialize the React VR application
+      ReactVR.init(
+        // When you're ready to deploy your app, update this line to point to
+        // your compiled index.bundle.js
+        '../index.vr.bundle?platform=vr&dev=true',
+        // Attach it to the body tag
+        document.body
+      );
+    </script>  
+  </body>
+</html>
