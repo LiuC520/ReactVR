@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>ReactVR</title>
+    <style>body { margin: 0; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="keywords" content="react vr中文网,react vr,react,react native,VR,AR,WebVR,虚拟现实">
+    <meta name="description" content="React VR：这是国内首次发布的中文 React VR 网站,供大家学习VR。FaceBoook在react native的基础上的又一个平台,目前是只能在web上浏览，但是从代码层面上看，平台后期会向移动端发展的，我还是比较看好的,这是在three.js的基础上开发的,里面有官方的四个例子,我会把这个网站跟官网实时同步的。以做到最新的API和用法呈现给大家。有问题可以联系我哦,QQ：674668211,微信同QQ一样的，github地址：https://github.com/LiuC520/ReactVR">
+    <meta name="baidu-site-verification" content="aYjF1bnzNw" />
+ <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a02cec774a0ed12e4c3a870a4540331";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<!--tengxun-->
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=61422738" charset="UTF-8"></script>
+  </head>
+  <body>
+    <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
+    <script src="./client.bundle.js"></script>
+    <script>
+      // Initialize the React VR application
+      ReactVR.init(
+        // When you're ready to deploy your app, update this line to point to
+        // your compiled index.bundle.js
+        './index.bundle.js',
+        // Attach it to the body tag
+        document.body,
+        {assetRoot:'./static_assets'}
+      );
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261484808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261484808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  </body>
+</html>

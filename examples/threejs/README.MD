@@ -10,3 +10,5 @@
  ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_animation_keyframes_json/example.gif)
 ###### 3. [webgl_animation_scene](http://www.vr-react.com/example/threejs/webgl_animation_scene)
  ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_animation_scene/example.gif)
+###### 3. [webgl_animation_skinning_blending](http://www.vr-react.com/example/threejs/webgl_animation_skinning_blending)
+ ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_animation_skinning_blending/example.gif)
