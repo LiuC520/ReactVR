@@ -27628,7 +27628,7 @@
 							json.name = value;
 							break;
 						case 'blending':
-							json.blending = THREE[ value ];
+							json.blending = THREE$1[ value ];
 							break;
 						case 'colorAmbient':
 						case 'mapAmbient':
@@ -32647,6 +32647,26 @@
 
 	CubeCamera.prototype = Object.create( Object3D.prototype );
 	CubeCamera.prototype.constructor = CubeCamera;
+
+	/**
+	 * @author mrdoob / http://mrdoob.com/
+	 */
+
+	function ArrayCamera( array ) {
+
+		PerspectiveCamera.call( this );
+
+		this.cameras = array || [];
+
+	}
+
+	ArrayCamera.prototype = Object.assign( Object.create( PerspectiveCamera.prototype ), {
+
+		constructor: ArrayCamera,
+
+		isArrayCamera: true
+
+	} );
 
 	/**
 	 * @author mrdoob / http://mrdoob.com/
@@ -41580,6 +41600,7 @@
 	  PerspectiveCamera: PerspectiveCamera,
 	  OrthographicCamera: OrthographicCamera,
 	  CubeCamera: CubeCamera,
+	  ArrayCamera: ArrayCamera,
 	  Camera: Camera,
 	  AudioListener: AudioListener,
 	  PositionalAudio: PositionalAudio,
@@ -41956,6 +41977,7 @@
 	exports.PerspectiveCamera = PerspectiveCamera;
 	exports.OrthographicCamera = OrthographicCamera;
 	exports.CubeCamera = CubeCamera;
+	exports.ArrayCamera = ArrayCamera;
 	exports.Camera = Camera;
 	exports.AudioListener = AudioListener;
 	exports.PositionalAudio = PositionalAudio;
