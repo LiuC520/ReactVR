@@ -4,4 +4,3 @@
 *.js.meta
 node_modules/
 examples/threejs/node_modules/
-build/
