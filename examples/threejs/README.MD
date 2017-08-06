@@ -12,3 +12,6 @@
  ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_animation_scene/example.gif)
 ###### 4. [webgl_animation_skinning_blending](http://www.vr-react.com/example/threejs/webgl_animation_skinning_blending)
  ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_animation_skinning_blending/example.gif)
+###### 6. [webgl_camera](http://www.vr-react.com/example/threejs/webgl_camera) 
+因为目前的react vr的VRinstance实例只能添加一个摄像机，所以看不到threejs原有的左右分别渲染的效果，如果要修改效果，可以把client.js的VRInstance中的{camera:camera,}去掉，就可以看到效果了
+ ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_camera/example.gif)

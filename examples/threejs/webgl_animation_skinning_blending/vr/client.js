@@ -1,18 +1,5 @@
-/**
- * The examples provided by Oculus are for non-commercial testing and
- * evaluation purposes only.
- *
- * Oculus reserves all rights not expressly granted.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL
- * OCULUS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
- * AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 
-// Auto-generated content.
+
 import {VRInstance} from 'react-vr-web';
 import * as THREE from 'three';
 
@@ -27,7 +14,8 @@ var mixer, object, scene, camera, clock, mesh, skeleton;
 var SCREEN_WIDTH = window.innerWidth
 var SCREEN_HEIGHT = window.innerHeight
 
-var url = './static_assets/marine_anims_core.json';
+var url = '../static_assets/marine_anims_core.json';
+var mouseX=0,mouseY=0;
 
 function init(bundle, parent, options) {
 
@@ -45,12 +33,50 @@ function init(bundle, parent, options) {
 		simulate();
 	};
 	vr.start();
-	window.vr = vr
-	vr.rootView.context.worker.addEventListener('message',onVRMessage)
+
+	window.vr = vr;
+	mouse();
+	vr.rootView.context.worker.addEventListener('message', onVRMessage);//接受消息的在react vr那边直接  postMessage({ type: "sceneLoadStart"})
+
   return vr;
 }
 
 window.ReactVR = {init};
+function mouse(){
+	window.onmousewheel = onRendererMouseWheel;
+	window.onmousedown = onClick
+	window.onmousemove= onMouseMove;
+	window.onmouseup= onMouseUp;
+	window.oncontextmenu = function(e){
+		return false;
+	}
+}
+function onClick(){
+	if(event.button==2){
+		mouseX = event.x;
+		mouseY = event.y;
+	}
+}
+function onMouseMove(){
+	if(mouseX != 0 && mouseY != 0){
+		let dx = (event.x - mouseX)/event.x
+		let dy = (event.y - mouseY)/event.y
+		let d=0
+		if(dx>0){
+			d = dx*200
+		}else{
+			d = dx*20
+		}
+	  	mesh.rotation.set(0,(d-135) * Math.PI / 180,0)
+	}
+}
+function onMouseUp(){
+		mouseX = 0;
+		mouseY = 0;
+}
+function onRendererMouseWheel(){
+	  mesh.rotation.set(0, (event.deltaY- 135) * Math.PI / 180,0)
+}
 //-------------------------------接受消息-s-------------------------------
 function onVRMessage(e) {
   switch (e.data.type) {
