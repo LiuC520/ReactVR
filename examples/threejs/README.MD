@@ -20,6 +20,8 @@
 ###### 8. [webgl_camera_cinematic](http://www.vr-react.com/example/threejs/webgl_camera_cinematic) 
 在threejs的源码基础上添加了cinematic相机的支持，可以修改index.vr.js里面的传到native的参数哦，看到不同的效果哦
  ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_camera_cinematic/example.gif)
+###### 9. [webgl_camera_logarithmicdepthbuffer](http://www.vr-react.com/example/threejs/webgl_camera_logarithmicdepthbuffer) 
+ ![image](https://github.com/LiuC520/ReactVR/blob/master/examples/threejs/webgl_camera_logarithmicdepthbuffer/example.gif)
 
 
 
