@@ -37,6 +37,8 @@ var scene,camera;
 				{ size: 9.46e23,       scale: 1.0,  label: "... (100,000,000 light years)" }
 			];
 			// const url = '../static_assets/helvetiker_regular.typeface.json'
+			// const url = asset('chess-world.jpg')
+			// console.log(url)
 function init(bundle, parent, options) {
 	// camera = new THREE.PerspectiveCamera( 50, screensplit * SCREEN_WIDTH / SCREEN_HEIGHT, NEAR, FAR );
 	// scene = new THREE.Scene();
@@ -55,6 +57,13 @@ function init(bundle, parent, options) {
 		cursorVisibility: 'visible',
 		scene: scene,
 		camera:camera,
+		hideCompass:false,
+		disableTouchPanning:true,
+		width:100,
+		height:200,
+		allowCarmelDeeplink:true,
+		hideFullscreen:false,
+		enableHotReload:true,
 		...options,
 	});
 	
