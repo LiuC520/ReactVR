@@ -19,10 +19,10 @@ function init(bundle, parent, options) {
   // rendered.
   // Alternatively, we could add a <Scene> element to our main React tree, which
   // also attaches the camera to the scene graph.
-  vr.scene.add(vr.camera());
-  // Mount the <HUD> component, with some initial props, to the camera object.
-  // This means that our component will move as the camera moves.
-  vr.mountComponent('HUD', {message: 'Hello'}, null);
+  // vr.scene.add(vr.camera());
+  // // Mount the <HUD> component, with some initial props, to the camera object.
+  // // This means that our component will move as the camera moves.
+  // vr.mountComponent('HUD', {message: 'Hello'}, null);
 
   // Begin the animation loop
   vr.start();

@@ -1,18 +1,21 @@
 import React from 'react';
 import {AppRegistry, Text, View} from 'react-vr';
 import HUD from './HUD.react';
+// var echarts = require('echarts');
+// 加载 Highmaps
+// var Highcharts = require('highcharts/highmaps.src.js');
 
-/**
- * This example demonstrates how to add multiple React roots to your 3D scene.
- * Beyond the initial root of your React tree, it is possible to mount other
- * components to elements of your scene, as long as they have been registered
- * in the AppRegistry.
- * These components can be added to any element of your scene; this is useful
- * when you need to attach a component to an object that is controlled outside
- * of React, such as a controller or an object with physics.
- *
- * Look at vr/client.js to see how the HUD component is mounted to the camera.
- */
+// // 加载 proj4，用于将经纬度转换成坐标值
+// var proj4 = require('./proj4.js');
+const ReactHighcharts = require('react-highcharts');
+const config = {
+  xAxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  },
+  series: [{
+    data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 295.6, 454.4]
+  }]
+};
 
 class MultiRootExample extends React.Component {
   render() {
@@ -32,6 +35,7 @@ class MultiRootExample extends React.Component {
           }}>
           Main Scene
         </Text>
+        <ReactHighcharts config = {config}></ReactHighcharts>
       </View>
     );
   }
